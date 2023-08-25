@@ -6,10 +6,18 @@
   npm install
 ```
 
-2. Run the app
+2. Create the database, `fund_management` in your localhost
+
+3. Migrate the database && run the seeds
 
 ```bash
-  npm run dev
+  npm run migrate
+```
+
+4. Run the api
+
+```bash
+  npm run start
 ```
 
 ## Login credentials
