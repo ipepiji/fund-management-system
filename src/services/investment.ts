@@ -7,7 +7,13 @@ interface Investment {
 
 class InvestmentService {
   static Invest(form: Investment) {
-    return axios.post<any>(`/invest`, form).then((res) => res.data)
+    const config: any = {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`
+      }
+    }
+
+    return axios.post<any>(`/invest`, form, config).then((res) => res.data)
   }
 }
 

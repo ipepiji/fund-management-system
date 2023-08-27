@@ -2,7 +2,13 @@ import { axios } from '@/utils'
 
 class FundService {
   static getFundList() {
-    return axios.get<any>(`/fund`).then((res) => res.data)
+    const config: any = {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`
+      }
+    }
+
+    return axios.get<any>(`/fund`, config).then((res) => res.data)
   }
 }
 

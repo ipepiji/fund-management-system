@@ -2,7 +2,13 @@ import { axios } from '@/utils'
 
 class PortfolioService {
   static getPortfolioDetails() {
-    return axios.get<any>(`/portfolio`).then((res) => res.data)
+    const config: any = {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`
+      }
+    }
+
+    return axios.get<any>(`/portfolio`, config).then((res) => res.data)
   }
 }
 

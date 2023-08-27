@@ -14,7 +14,6 @@ const getPortfolioDetails = () => {
         err.response?.data.message ||
         (err.message === 'Network Error' ? 'Please ensure the backend is running!' : err.message)
       console.log(error.value)
-      portfolioDetails.value = {}
     }
   }
 
