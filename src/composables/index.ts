@@ -1,2 +1,3 @@
-export { default as getArticleList } from "./getArticleList";
-export { default as getCategoryList } from "./getCategoryList";
+export { default as getFundList } from './getFundList'
+export { default as getPerformanceHistoryList } from './getPerformanceHistoryList'
+export { default as getPortfolioDetails } from './getPortfolioDetails'

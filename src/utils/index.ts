@@ -1,2 +1,1 @@
-export { default as axios } from "./axios";
-export * from "./common";
+export { default as axios } from './axios'

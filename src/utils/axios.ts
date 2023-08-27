@@ -1,7 +1,17 @@
-import axios from "axios";
+import axios from 'axios'
 
-const service = axios.create({
-  baseURL: "http://localhost:9000/api",
-});
+let config: any = {
+  baseURL: import.meta.env.VITE_API_URL
+}
 
-export default service;
+if (localStorage.getItem('token'))
+  config = {
+    ...config,
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('token')}`
+    }
+  }
+
+const service = axios.create(config)
+
+export default service

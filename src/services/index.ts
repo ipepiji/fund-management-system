@@ -1,3 +1,5 @@
-export { default as ArticleService } from "./article";
-export { default as AuthorService } from "./author";
-export { default as CategoryService } from "./category";
+export { default as UserService } from './user'
+export { default as FundService } from './fund'
+export { default as InvestmentService } from './investment'
+export { default as PerformanceHistoryService } from './performanceHistory'
+export { default as PortfolioService } from './portfolio'
